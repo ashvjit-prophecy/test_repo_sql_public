@@ -1,0 +1,53 @@
+---
+version: 2
+sources:
+- name: "SNOWFLAKE.DATA_SHARING_USAGE"
+  database: "SNOWFLAKE"
+  schema: "DATA_SHARING_USAGE"
+  config:
+    enabled: true
+  tables:
+  - name: "LISTING_CONSUMPTION_DAILY"
+    columns:
+    - name: "EVENT_DATE"
+      dataType:
+        type: "Date"
+    - name: "EXCHANGE_NAME"
+      dataType:
+        type: "String"
+    - name: "SNOWFLAKE_REGION"
+      dataType:
+        type: "String"
+    - name: "LISTING_NAME"
+      dataType:
+        type: "String"
+    - name: "LISTING_DISPLAY_NAME"
+      dataType:
+        type: "String"
+    - name: "LISTING_GLOBAL_NAME"
+      dataType:
+        type: "String"
+    - name: "PROVIDER_ACCOUNT_LOCATOR"
+      dataType:
+        type: "String"
+    - name: "PROVIDER_ACCOUNT_NAME"
+      dataType:
+        type: "String"
+    - name: "SHARE_NAME"
+      dataType:
+        type: "String"
+    - name: "CONSUMER_ACCOUNT_LOCATOR"
+      dataType:
+        type: "String"
+    - name: "CONSUMER_ACCOUNT_NAME"
+      dataType:
+        type: "String"
+    - name: "CONSUMER_ORGANIZATION"
+      dataType:
+        type: "String"
+    - name: "JOBS"
+      dataType:
+        type: "Number"
+    - name: "REGION_GROUP"
+      dataType:
+        type: "String"
