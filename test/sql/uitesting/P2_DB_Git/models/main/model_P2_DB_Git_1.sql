@@ -1,5 +1,3 @@
-
-
 {% set v_int_p2 = 10 %}
 
 WITH raw_customers_p1 AS (
