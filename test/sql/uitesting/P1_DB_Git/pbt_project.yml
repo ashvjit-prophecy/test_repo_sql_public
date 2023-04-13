@@ -18,10 +18,87 @@ functions:
   udafs: {}
   expressions: {}
 subgraphs: {}
-sqlModels: {}
-sqlMacros: {}
-sqlSeeds: {}
-sqlSources: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/model_P1_DB_Git_1:
+    name: model_P1_DB_Git_1
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - models/model_P1_DB_Git_1.sql
+    - .prophecy/ide/models/model_P1_DB_Git_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-13 02:08:44'
+    modifiedAt: '2023-04-13 02:08:44'
+  .prophecy/metadata/sqlmodels/model_P1_DB_Git_2:
+    name: model_P1_DB_Git_2
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - models/model_P1_DB_Git_2.sql
+    - .prophecy/ide/models/model_P1_DB_Git_2.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-13 02:28:07'
+    modifiedAt: '2023-04-13 02:28:07'
+  .prophecy/metadata/sqlmodels/model_P1_DB_Git_3:
+    name: model_P1_DB_Git_3
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - models/model_P1_DB_Git_3.sql
+    - .prophecy/ide/models/model_P1_DB_Git_3.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-13 02:28:27'
+    modifiedAt: '2023-04-13 02:28:27'
+sqlMacros:
+  .prophecy/metadata/sqlmacros/qa_concat_p1:
+    name: qa_concat_p1
+    macroType: expression
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - macros/functions/qa_concat.sql
+    - macros/functions/functions.yml
+    createdAt: '2023-04-13 02:08:25'
+    modifiedAt: '2023-04-13 02:08:25'
+  .prophecy/metadata/sqlmacros/qa_not_null_gem_p1:
+    name: qa_not_null_gem_p1
+    macroType: query
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - macros/gems/qa_not_null_gem_p1.sql
+    createdAt: '2023-04-13 02:08:20'
+    modifiedAt: '2023-04-13 02:08:20'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_customers_p1:
+    name: raw_customers_p1
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - seeds/raw/raw_customers_p1.csv
+    createdAt: '2023-04-13 02:06:15'
+    modifiedAt: '2023-04-13 02:06:15'
+sqlSources:
+  .prophecy/metadata/sqlsources/spark_catalog_qa_database:
+    name: spark_catalog.qa_database
+    description: null
+    author: abhisheks+sql@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-04-13 02:12:09'
+    modifiedAt: '2023-04-13 02:12:09'
+    tables:
+    - name: all_type_parquet
+      description: null
+      author: abhisheks+sql@prophecy.io
+      createdAt: '2023-04-13 02:12:09'
+      modifiedAt: '2023-04-13 02:12:09'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
