@@ -51,14 +51,14 @@ sqlMacros:
     createdAt: '2023-04-13 02:20:19'
     modifiedAt: '2023-04-13 02:20:19'
 sqlSeeds:
-  .prophecy/metadata/sqlseeds/raw_customers_p1:
-    name: raw_customers_p1
+  .prophecy/metadata/sqlseeds/raw_customers_p2:
+    name: raw_customers_p2
     description: null
     author: abhisheks+sql@prophecy.io
     files:
-    - seeds/raw/raw_customers_p1.csv
-    createdAt: '2023-04-13 02:19:37'
-    modifiedAt: '2023-04-13 02:19:37'
+    - seeds/raw/raw_customers_p2.csv
+    createdAt: '2023-04-13 02:34:35'
+    modifiedAt: '2023-04-13 02:34:35'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:
