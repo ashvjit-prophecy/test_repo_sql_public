@@ -1,10 +1,10 @@
 {% set v_int_p2 = 10 %}
 
-WITH raw_customers_p1 AS (
+WITH raw_customers_p2 AS (
 
   SELECT * 
   
-  FROM {{ ref('raw_customers_p1')}}
+  FROM {{ ref('raw_customers_p2')}}
 
 ),
 
@@ -16,7 +16,7 @@ Reformat_1 AS (
     last_name AS last_name,
     concat({{ var('v_int_project_p2')}}, {{v_int_p2}}) AS c_macro_p2
   
-  FROM raw_customers_p1 AS in0
+  FROM raw_customers_p2 AS in0
 
 )
 
