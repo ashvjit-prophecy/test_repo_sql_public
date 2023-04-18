@@ -25,7 +25,6 @@ sqlModels:
     author: abhisheks+sql@prophecy.io
     files:
     - models/main/model_P2_DB_Git_1.sql
-    - .prophecy/ide/models/model_P2_DB_Git_1.json
     sqlDependencies:
       models: []
       datasets: []
