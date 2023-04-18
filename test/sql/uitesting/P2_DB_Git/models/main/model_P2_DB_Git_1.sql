@@ -12,8 +12,8 @@ Reformat_1 AS (
 
   SELECT 
     id AS id,
-    first_name AS first_name,
-    last_name AS last_name,
+    last_name AS first_name,
+    first_name AS last_name,
     concat({{ var('v_int_project_p2')}}, {{v_int_p2}}) AS c_macro_p2
   
   FROM raw_customers_p2 AS in0
