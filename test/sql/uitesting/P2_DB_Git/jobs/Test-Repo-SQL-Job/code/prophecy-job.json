@@ -1,0 +1,98 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "21",
+    "jobId" : "jobs/Test-Repo-SQL-Job",
+    "name" : "Test-Repo-SQL-Job",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : true,
+    "defaultClusterSize" : "prophecy_internal_jobs",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "21",
+      "name" : "databricks-sql-warehouse",
+      "clusterSizes" : {
+        "default" : "prophecy_internal_jobs",
+        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
+      }
+    }, {
+      "id" : "23",
+      "name" : "databricks_sql_warehouse_qa",
+      "clusterSizes" : {
+        "default" : "prophecy_internal_jobs",
+        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "C1FvQdT1j9c4mEYU_PTb-$$mvFdoT5FJiTYMjGHesrjg" : {
+      "id" : "C1FvQdT1j9c4mEYU_PTb-$$mvFdoT5FJiTYMjGHesrjg",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : 140,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zu1dd5Zl31pIB_XF6aRk5$$gI1dKC-EUN6xvtCNeVv2m",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "CG6gd7jLzhWnheGEpyg-S$$WByk6j-Mvgqorev45M-Dw",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "execSeed" : true,
+        "execRun" : true,
+        "gitEntity" : "branch",
+        "projectId" : "79",
+        "runOnlyModel" : "false",
+        "loadingModels" : false,
+        "profile" : "run_profile",
+        "sqlFabricId" : "21",
+        "gitEntityValue" : "main",
+        "execDeps" : true,
+        "execTest" : false,
+        "currentProjectModels" : [ {
+          "label" : "model_P2_DB_Git_1",
+          "value" : "model_P2_DB_Git_1",
+          "id" : "79/.prophecy/metadata/sqlmodels/model_P2_DB_Git_1",
+          "name" : "model_P2_DB_Git_1"
+        } ]
+      }
+    }
+  },
+  "connections" : [ ]
+}

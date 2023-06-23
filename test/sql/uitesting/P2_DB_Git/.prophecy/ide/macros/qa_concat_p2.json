@@ -1,0 +1,29 @@
+{
+  "qa_concat_p2" : {
+    "name" : "qa_concat_p2",
+    "macroType" : "expression",
+    "definition" : "concat({{param_1}}, {{param_2}})",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "param_1",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "param_2",
+        "kind" : {
+          "type" : "value",
+          "value" : "'hello'"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "qa_not_null_gem_p2" : {
+    "name" : "qa_not_null_gem_p2",
+    "macroType" : "query",
+    "definition" : "\nselect * from {{model}} where {{col}} is not null",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "col",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  }
+}

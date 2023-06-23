@@ -1,0 +1,240 @@
+{
+  "id" : "model_P2_DB_Git_1",
+  "metainfo" : {
+    "label" : "model_P2_DB_Git_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : {
+          "v_int_p2" : "10"
+        }
+      }
+    }
+  },
+  "processes" : {
+    "raw_customers_p2##RVjFxzD3" : {
+      "id" : "raw_customers_p2##RVjFxzD3",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "raw_customers_p2",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "raw_customers_p2",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "M3aC4V6S",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Reformat_1##sg5rhaH8" : {
+      "id" : "Reformat_1##sg5rhaH8",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "CnVigrj7##id", "CnVigrj7##last_name", "CnVigrj7##first_name" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "id"
+        }, {
+          "expression" : {
+            "expression" : "last_name"
+          },
+          "alias" : "first_name"
+        }, {
+          "expression" : {
+            "expression" : "first_name"
+          },
+          "alias" : "last_name"
+        }, {
+          "expression" : {
+            "expression" : "concat({{ var('v_int_project_p2')}}, {{v_int_p2}})"
+          },
+          "alias" : "c_macro_p2"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CnVigrj7",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "CXyjXd4h",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_macro_p2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "model_P2_DB_Git_1##tlo19IUF" : {
+      "id" : "model_P2_DB_Git_1##tlo19IUF",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "model_P2_DB_Git_1",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Reformat_1\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "auEJQpaa",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_macro_p2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Reformat_1"
+        } ],
+        "outputs" : [ {
+          "id" : "b4jZ4MTJ",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_macro_p2",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "DYUlYzIN",
+    "source" : "raw_customers_p2##RVjFxzD3",
+    "sourcePort" : "M3aC4V6S",
+    "target" : "Reformat_1##sg5rhaH8",
+    "targetPort" : "CnVigrj7"
+  }, {
+    "id" : "ZLregFIm",
+    "source" : "Reformat_1##sg5rhaH8",
+    "sourcePort" : "CXyjXd4h",
+    "target" : "model_P2_DB_Git_1##tlo19IUF",
+    "targetPort" : "auEJQpaa"
+  } ],
+  "component" : "Model"
+}
