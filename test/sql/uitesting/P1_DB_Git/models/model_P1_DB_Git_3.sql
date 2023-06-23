@@ -10,7 +10,7 @@ Reformat_1 AS (
 
   SELECT 
     c_tinyint AS c_tinyint,
-    c_smallint AS c_smallint,
+    0 AS c_smallint,
     c_int AS c_int,
     c_bigint AS c_bigint,
     c_float AS c_float,
